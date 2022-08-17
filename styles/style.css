@@ -17,7 +17,7 @@ h1 {
     margin-top: 20px;
     font-size: 4rem;
 }
-.container {
+.container-randomMichis {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,13 +25,13 @@ h1 {
     padding: 20px;
     position: relative;
 }
-.container .image{
+.container-randomMichis.image{
     border-radius: 16px;
     margin: 20px;
     width: auto;
     height: 500px;
 }
-.container .button {
+.container-randomMichis .button2 {
     align-items: center;
     background-color: blanchedalmond;
     border: none;
@@ -46,4 +46,14 @@ h1 {
 .button:hover {
     color: #ffff;
     border: 1px solid #dddd;
+}
+#error {
+    color: red;
+    z-index: 1;
+    position: absolute;
+    border-radius: 12px;
+    width: auto;
+    padding: 12px;
+    margin: 20px;
+    top: 40vh;
 }
