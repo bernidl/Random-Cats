@@ -46,3 +46,12 @@ h1 {
     color: #ffff;
     border: 1px solid #dddd;
 }
+
+@media screen and (max-width: 667px){
+    h1 {
+        font-size: 2rem;
+    }
+    .container .button {
+        font-size: 1rem;
+    }
+}
