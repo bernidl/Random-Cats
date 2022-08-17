@@ -24,6 +24,26 @@ async function loadFavoriteMichi () {
         spanError.innerHTML = "Error: " + res.status + " " + data.message;
     } 
 }
+
+async function saveFavoriteMichis(){
+    const res = await fetch(API_URL_FAVORITES,{
+        method: 'POST',
+        headers: {
+            'Conten-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            image_id: 'dje'
+        }),
+    });
+    
+    const data = await res.json();
+
+    if(res.status !== 200) {
+        spanError.innerHTML = "Error: " + res.status + " " + data.message;
+    } 
+    
+}
+
 const myButton = document.getElementById("randomBtt");
 myButton.onclick = loadRandomMichis;
 
