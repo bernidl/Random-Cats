@@ -125,6 +125,19 @@ async function uploadMichiPhoto() {
 
 }
 
+const previewImage = () => {
+    const file = document.getElementById('file').files;
+
+    if(file.length > 0){
+        const fileReader = new FileReader();
+
+        fileReader.onload = function(e) {
+            document.getElementById('preview').setAttribute("src", e.target.result)
+        };
+        fileReader.readAsDataURL(file[0]);
+    }
+}
+
 const myButton = document.getElementById("randomBtt");
 myButton.onclick = loadRandomMichis;
 
