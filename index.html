@@ -31,6 +31,15 @@
 
         <button id="randomBtt" class="button2">New cat!</button>
     </section>
+    <section id="uploadingMichin">
+        <h2>Updload your cat photo!</h2>
+        <form id="uploadingForm">
+            <label for="file" class="custom-file-upload">Select the photo</label>
+            <input id="file" type="file" name="file" onchange="previewImage()"/>
+            <img id="preview">
+            <button type="button" onclick="uploadMichiPhoto()">Upload photo</button>
+        </form>
+    </section>
     <section id="container-favoriteMichis">
         <article>
             <h2>Favorite Cats</h2>
