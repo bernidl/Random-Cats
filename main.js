@@ -52,7 +52,7 @@ async function loadFavoriteMichi () {
             btn.appendChild(btnText);
             btn.onclick = () => deleteFavoriteMichi(michi.id);
             img.src = michi.image.url;
-            img.width = 150;
+            img.width = 280;
             article.appendChild(img);
             article.appendChild(btn);
             section.appendChild(article);

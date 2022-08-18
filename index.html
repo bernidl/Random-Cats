@@ -5,48 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Cats With Api Rest</title>
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/desktop.css">
     <link rel="stylesheet" media="(max-width:768px)" href="./styles/movil.css">
+    <link rel="stylesheet" media="(max-width: 1279px)" href="./styles/tablet.css">
 </head>
 <body>
     <header>
         <h1>Michis App</h1>
     </header>
+    <main>
         <span id="error"></span>
-    <section class="container-randomMichis">
-        <h2>Random Cats</h2>
+        <section class="container-randomMichis">
+            <h2>Random Cats</h2>
 
-        <article>
-            <img  id="randomImg1" alt="Foto gatito aleatorio" class="image">
-            <button id="btn1"  class="button1">
-                Save michi in favorites
-            </button>
-        </article>
-        <article>
-            <img  id="randomImg2" alt="Foto gatito aleatorio" class="image">
-            <button id="btn2"  class="button1">
-                Save michi in favorites
-            </button>
-        </article>
+            <article class="art-image">
+                <img id="randomImg1" alt="Foto gatito aleatorio" class="image">
+                <button id="btn1"  class="button1">
+                    Save michi in favorites
+                </button>
+            </article>
+            <article class="art-image">
+                <img  id="randomImg2" alt="Foto gatito aleatorio" class="image">
+                <button id="btn2"  class="button1">
+                    Save michi in favorites
+                </button>
+            </article>
+            <button id="randomBtt" class="button2">New Cats!</button>
+        </section>
 
-        <button id="randomBtt" class="button2">New cat!</button>
-    </section>
-    <section id="uploadingMichin">
-        <h2>Updload your cat photo!</h2>
-        <form id="uploadingForm">
-            <label for="file" class="custom-file-upload">Select the photo</label>
-            <input id="file" type="file" name="file" onchange="previewImage()"/>
-            <img id="preview">
-            <button type="button" onclick="uploadMichiPhoto()">Upload photo</button>
-        </form>
-    </section>
-    <section id="container-favoriteMichis">
-        <article>
+        <section id="uploadingMichin" class="container-favoriteMichis">
+            <h2>Updload your cat photo!</h2>
+            <form class="form" id="uploadingForm"> 
+                <label for="file" class="custom-file-upload">Select the photo</label>
+                <input class="input-form" id="file" type="file" name="file" onchange="previewImage()"/>
+                <img id="preview">
+                <button class="upload-button" type="button" onclick="uploadMichiPhoto()">Upload photo</button>
+            </form>
+        </section>
+
+        <section class="container-favoriteMichis2" id="container-favoriteMichis">
             <h2>Favorite Cats</h2>
-            <img  id="randomImg1" alt="Foto gatito aleatorio" class="image">
-            <button class="button1">Remove michi from favorites</button>
-        </article>
-    </section>
+            <article class="art-f">
+                <img class="favorite-cat-select" id="randomImg1" alt="Foto gatito aleatorio" >
+                <button class="button3">Remove michi from favorites</button>
+            </article>
+            
+        </section>
+    </main>
+    <footer>
+        <ul class="footer-L">
+            <li class="footer-list_li"><a href="https://github.com/bernidl">My GitHub</a></li>
+            <li class="footer-list_li"><a href="https://www.instagram.com/bernidileo/">My Instagram</a></li>
+        </ul>
+        
+        <ul class="footer_R">
+            <li class="footer-list_li">Never stop learning</li>
+            <li class="footer-list_li"><a href="https://platzi.com/home">Platzi</a></li>                
+        </ul>
+    
+    </footer>
     <script src="./main.js"></script>
 </body>
 </html>
