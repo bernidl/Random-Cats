@@ -50,14 +50,16 @@ async function loadFavoriteMichi () {
 
         data.forEach(michi => {
             const article = document.createElement('article');
+            article.className = "art_fav--cat"
             const img = document.createElement('img');
+            img.className = "img_fav--cat";
             const btn = document.createElement('button');
+            btn.className = "img_delete--cat";
             const btnText = document.createTextNode('Remove michi from favorites');
 
             btn.appendChild(btnText);
             btn.onclick = () => deleteFavoriteMichi(michi.id);
             img.src = michi.image.url;
-            img.width = 280;
             article.appendChild(img);
             article.appendChild(btn);
             section.appendChild(article);
