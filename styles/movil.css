@@ -35,7 +35,6 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
 }
 .title {
     text-align: center;
@@ -105,6 +104,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 60px;
 }
 .container-favoriteMichis h2 {
     margin: 15px 0;
@@ -184,8 +184,9 @@ main {
     align-items: center;
 }
 
-.container-favoriteMichis2 h2{
-    margin: 20px 0;
+.h2-favorites {
+    margin-top: 60px;
+    text-align: center;
 }
 .favorite-cat-select {
     display: flex;
@@ -245,7 +246,7 @@ footer {
     flex-direction: column;
     align-items:center;
     font-size: 0.7rem;
-    
+    margin-top: 60px;
     border-top: 1px solid var(--art-border-color);
     background-color: #F5E8C7;
 }

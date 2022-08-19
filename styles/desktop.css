@@ -1,4 +1,30 @@
-footer ul {
-    display: flex;
+header {
+    justify-content: flex-start;
+    margin-bottom: 30px;
+}
+header h1 {
+    margin-left: 40px;
+}
+.container-randomMichis{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+}
+.art-image {
+    width: 280px;
+}
+.image {
     justify-content: center;
+    max-width: 260px;
+    height: 200px;
+}
+.h2-favorites {
+    text-align: start;
+    margin-left: 50px;
+}
+.container-favoriteMichis2 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+footer {
+    bottom: 0;
+    width: 100%;
 }

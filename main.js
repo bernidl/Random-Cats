@@ -124,25 +124,30 @@ async function deleteFavoriteMichi(id){
 }
 
 async function uploadMichiPhoto() {
+    const {data, status} = await api.post('/favourites', {
+        headers: {
+            'X-API-KEY': 'c2038054-20cb-493f-96d6-50f3d474c9ef',
+        }
+    })
     const form = document.getElementById('uploadingForm');
     const formData = new FormData(form);
 
-    const res = await fetch(API_URL_UPLOAD, {
-        method: 'POST',
-        headers : {
-            //'Content-Type': 'multipart/form-data',
-            'X-API-KEY': 'c2038054-20cb-493f-96d6-50f3d474c9ef',
-        },
-        body: formData,
-    });
+    // const res = await fetch(API_URL_UPLOAD, {
+    //     method: 'POST',
+    //     headers : {
+    //         //'Content-Type': 'multipart/form-data',
+    //         'X-API-KEY': 'c2038054-20cb-493f-96d6-50f3d474c9ef',
+    //     },
+    //     body: formData,
+    // });
     
-    const data = await res.json();
+    //const data = await res.json();
 
-    if(res.status !==201){
-        spanError.innerHTML = "Upload Error: " + res.status + " " + data.message;
+    if(status !==201){
+        spanError.innerHTML = "Upload Error: " + res.status + " " + data.message + "xd";
     } else {
         console.log('Upload photo')
-        saveFavoriteMichi(data.id)
+        saveFavoriteMichi(data.id);
     }
 
 }
