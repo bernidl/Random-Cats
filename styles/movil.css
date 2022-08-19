@@ -35,10 +35,11 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
-.container-randomMichis h2 {
-    font-size: 2rem;
+.title {
+    text-align: center;
+    font-size: 1.6rem;
     margin-bottom: 10px;
 }
 .art-image {
@@ -72,16 +73,18 @@ main {
 .button1:hover {
     color: var(--art-background-color);
 }
-.container-randomMichis .button2 {
-    align-items: center;
+.button-container {
+    width: 100%;
+    text-align: center;
+}
+.container-randomMichis__section .button2 {
     background-color: var(--button-color);
     border: none;
     border-radius: 14px;
     cursor: pointer;
     font-size: 2rem;
     padding: 12px 30px;
-    position: relative;
-    bottom: 25px;
+    margin-bottom: 60px;
 }
 
 .button2:hover {
@@ -99,7 +102,6 @@ main {
     top: 40vh;
 }
 .container-favoriteMichis {
-    border-top: 1px solid var(--art-background-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -176,7 +178,6 @@ main {
     border: 1px solid var(--font-color);
 }
 .container-favoriteMichis2 {
-    border-top: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -240,22 +241,23 @@ main {
 
 footer {
     bottom: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
     font-size: 0.7rem;
     
     border-top: 1px solid var(--art-border-color);
     background-color: #F5E8C7;
 }
 footer ul {
-    margin: 10px;
+    margin:  5px 10px;
     list-style: none;
     display: flex;
-    padding-left: 0;
 }
 .footer-L {
-    justify-content: left;
+    display: flex;
+    flex-direction: column;   
+    align-items: center;
 }
 
 footer li a {
@@ -268,7 +270,9 @@ footer li a {
 footer li {
     padding: 4px;
 }
-
+.footer_R a {
+    color: green;
+}
 footer li a:hover {
     color: var(--art-background-color);
 }

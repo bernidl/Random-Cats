@@ -1,0 +1,49 @@
+.container-randomMichis{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+}
+.art-image {
+   width: auto;
+}
+.image {
+    max-width: 300px;
+    height: 200px;
+}
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+footer ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.footer_R {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.footer-L {
+    align-items: baseline;
+}
+.button2 {
+    width: 90%;
+    margin: 16px auto;
+}
+.container-favoriteMichis2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+}
+.art_fav--cat{
+    width: auto;
+}
+.img_fav--cat {
+    max-width: 300px;
+    height: 200px;
+}
+.h2-favorites {
+    margin-top: 60px;
+    text-align: center;
+}

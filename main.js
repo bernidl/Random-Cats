@@ -3,7 +3,7 @@ const api = axios.create({
 });
 api.defaults.headers.common['X-API-KEY'] = 'c2038054-20cb-493f-96d6-50f3d474c9ef';
 
-const API_URL_RANDOM = 'https://api.thecatapi.com/v1/images/search?limit=2';
+const API_URL_RANDOM = 'https://api.thecatapi.com/v1/images/search?limit=4';
 const API_URL_FAVORITES = 'https://api.thecatapi.com/v1/favourites';
 const API_URL_DELETE = (id) => `https://api.thecatapi.com/v1/favourites/${id}`;
 const API_URL_UPLOAD = 'https://api.thecatapi.com/v1/images/upload/';
@@ -18,14 +18,22 @@ async function loadRandomMichis () {
     } else {
         const img1 = document.getElementById("randomImg1");
         const img2 = document.getElementById("randomImg2");
+        const img3 = document.getElementById("randomImg3");
+        const img4 = document.getElementById("randomImg4");
         const btn1 = document.getElementById("btn1");
         const btn2 = document.getElementById("btn2");
+        const btn3 = document.getElementById("btn3");
+        const btn4 = document.getElementById("btn4");
 
         img1.src = data[0].url;
         img2.src = data[1].url;
+        img3.src = data[2].url;
+        img4.src = data[3].url;
 
         btn1.onclick = () => saveFavoriteMichi(data[0].id);
         btn2.onclick = () => saveFavoriteMichi(data[1].id);
+        btn3.onclick = () => saveFavoriteMichi(data[2].id);
+        btn4.onclick = () => saveFavoriteMichi(data[3].id);
     }
     
 }
@@ -43,10 +51,11 @@ async function loadFavoriteMichi () {
     } else {
         const section = document.getElementById('container-favoriteMichis');
         section.innerHTML = "";
-        const h2 = document.createElement('h2');
-        const h2text = document.createTextNode('Favorite Cats');
-        h2.appendChild(h2text);
-        section.appendChild(h2);
+        //const h2 = document.createElement('h2');
+       // const h2text = document.createTextNode('Favorite Cats');
+        //h2.appendChild(h2text);
+        //section.appendChild(h2);
+       // h2.className = "h2-favorites";
 
         data.forEach(michi => {
             const article = document.createElement('article');

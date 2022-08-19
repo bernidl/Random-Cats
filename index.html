@@ -15,25 +15,41 @@
         <h1>Michis App</h1>
     </header>
     <main>
-        <span id="error"></span>
-        <section class="container-randomMichis">
-            <h2>Random Cats</h2>
+        <span id="error"></span> <h2 class="title">Random Cats</h2>
+        <section class="container-randomMichis__section">
+           <div class="container-randomMichis"> 
+                <article class="art-image">
+                    <img id="randomImg1" alt="Foto gatito aleatorio" class="image">
+                    <button id="btn1"  class="button1">
+                        Save michi in favorites
+                    </button>
+                </article>
+                <article class="art-image">
+                    <img  id="randomImg2" alt="Foto gatito aleatorio" class="image">
+                    <button id="btn2"  class="button1">
+                        Save michi in favorites
+                    </button>
+                </article>
+                <article class="art-image">
+                    <img  id="randomImg3" alt="Foto gatito aleatorio" class="image">
+                    <button id="btn3"  class="button1">
+                        Save michi in favorites
+                    </button>
+                </article>
+                <article class="art-image">
+                    <img  id="randomImg4" alt="Foto gatito aleatorio" class="image">
+                    <button id="btn4"  class="button1">
+                        Save michi in favorites
+                    </button>
+                </article>
+           </div>
 
-            <article class="art-image">
-                <img id="randomImg1" alt="Foto gatito aleatorio" class="image">
-                <button id="btn1"  class="button1">
-                    Save michi in favorites
-                </button>
-            </article>
-            <article class="art-image">
-                <img  id="randomImg2" alt="Foto gatito aleatorio" class="image">
-                <button id="btn2"  class="button1">
-                    Save michi in favorites
-                </button>
-            </article>
-            <button id="randomBtt" class="button2">New Cats!</button>
+            <div class="button-container">
+                <button id="randomBtt" class="button2">New Cats!</button>
+            </div>
         </section>
-
+            
+        
         <section id="uploadingMichin" class="container-favoriteMichis">
             <h2>Updload your cat photo!</h2>
             <form class="form" id="uploadingForm"> 
@@ -43,9 +59,8 @@
                 <button class="upload-button" type="button" onclick="uploadMichiPhoto()">Upload photo</button>
             </form>
         </section>
-
+          <h2 class="h2-favorites">Favorite Cats</h2>
         <section class="container-favoriteMichis2" id="container-favoriteMichis">
-            <h2>Favorite Cats</h2>
             <article >
                 <img  id="randomImg1" alt="Foto gatito aleatorio" >
                 <button >Remove michi from favorites</button>
