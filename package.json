@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "no"
+    "url": "git@github.com:bernidl/Random-Cats.git"
   },
   "author": "Bernardo Di Leo",
   "license": "MIT"
