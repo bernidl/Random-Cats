@@ -6,7 +6,7 @@ api.defaults.headers.common['X-API-KEY'] = 'c2038054-20cb-493f-96d6-50f3d474c9ef
 const API_URL_RANDOM = 'https://api.thecatapi.com/v1/images/search?limit=4';
 const API_URL_FAVORITES = 'https://api.thecatapi.com/v1/favourites';
 const API_URL_DELETE = (id) => `https://api.thecatapi.com/v1/favourites/${id}`;
-const API_URL_UPLOAD = 'https://api.thecatapi.com/v1/images/upload/';
+const API_URL_UPLOAD = 'https://api.thecatapi.com/v1/images/upload';
 
 const spanError = document.getElementById('error');
 
@@ -92,7 +92,7 @@ async function saveFavoriteMichi(id){
     //     }),
     // });
     
-    // const data = await res.json();
+    //const data = await res.json();
 
 
 
@@ -124,26 +124,26 @@ async function deleteFavoriteMichi(id){
 }
 
 async function uploadMichiPhoto() {
-    const {data, status} = await api.post('/favourites', {
-        headers: {
-            'X-API-KEY': 'c2038054-20cb-493f-96d6-50f3d474c9ef',
-        }
-    })
+    // const {data, status} = await api.post('/images/upload', {
+    //     headers: {
+    //         'X-API-KEY': 'c2038054-20cb-493f-96d6-50f3d474c9ef',
+    //     }
+    // })
     const form = document.getElementById('uploadingForm');
     const formData = new FormData(form);
 
-    // const res = await fetch(API_URL_UPLOAD, {
-    //     method: 'POST',
-    //     headers : {
-    //         //'Content-Type': 'multipart/form-data',
-    //         'X-API-KEY': 'c2038054-20cb-493f-96d6-50f3d474c9ef',
-    //     },
-    //     body: formData,
-    // });
+    const res = await fetch(API_URL_UPLOAD, {
+        method: 'POST',
+        headers : {
+            //'Content-Type': 'multipart/form-data',
+            'X-API-KEY': 'c2038054-20cb-493f-96d6-50f3d474c9ef',
+        },
+        body: formData,
+    });
     
-    //const data = await res.json();
+    const data = await res.json();
 
-    if(status !==201){
+    if(res.status !==201){
         spanError.innerHTML = "Upload Error: " + res.status + " " + data.message + "xd";
     } else {
         console.log('Upload photo')
